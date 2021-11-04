@@ -10,12 +10,12 @@ class UpdateProductStatusController{
 
       const updateProductStatusService = new UpdateProductStatusService();
 
-      const result = await updateProductStatusService.execute(merchantId, productId, authToken, status);
+      await updateProductStatusService.execute(merchantId, productId, authToken, status);
 
-      return response.send();
+      return response.status(204).send();
     }
     catch (err) {
-      return response.json(err.message);
+      return response.json(err);
     }
   } 
 }
