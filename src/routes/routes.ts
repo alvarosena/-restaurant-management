@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { AuthenticateMerchantController } from "../controllers/AuthenticateMerchantController";
-import { GetMerchantDetailsController } from "../controllers/GetMerchantDetailsController";
-import { ListMerchantProductsController } from "../controllers/ListMerchantProductsController";
-import { UpdateProductStatusController } from "../controllers/UpdateProductStatusController";
+import { AuthenticateMerchantController } from "../modules/ifood/controllers/AuthenticateMerchantController";
+import { GetMerchantDetailsController } from "../modules/ifood/controllers/GetMerchantDetailsController";
+import { ListMerchantProductsController } from "../modules/ifood/controllers/ListMerchantProductsController";
+import { UpdateProductStatusController } from "../modules/ifood/controllers/UpdateProductStatusController";
 
 const routes = Router();
 
