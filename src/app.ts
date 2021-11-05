@@ -3,13 +3,15 @@ import express, { json } from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 
-import { routes } from './routes/routes';
+import { ifoodRoutes } from './modules/ifood/routes/ifood.routes';
+import { uberRoutes } from './modules/uber/routes/uber.routes';
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}))
-app.use(routes);
+app.use(ifoodRoutes);
+app.use(uberRoutes);
 
 
 
