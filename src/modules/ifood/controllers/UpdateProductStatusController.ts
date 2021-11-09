@@ -10,7 +10,7 @@ class UpdateProductStatusController{
 
       const updateProductStatusService = new UpdateProductStatusService();
 
-      await updateProductStatusService.execute(merchantId, productId, authToken, status);
+      await updateProductStatusService.execute({merchantId, productId, authToken, status});
 
       return response.status(204).send();
     }

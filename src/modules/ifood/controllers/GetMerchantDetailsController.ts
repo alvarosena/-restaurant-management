@@ -9,7 +9,7 @@ class GetMerchantDetailsController{
 
       const getMerchantDetailsService = new GetMerchantDetailsService();
       
-      const merchantDetails = await getMerchantDetailsService.execute(merchantId, authToken);
+      const merchantDetails = await getMerchantDetailsService.execute({merchantId, authToken});
 
       return response.json(merchantDetails);
     } 

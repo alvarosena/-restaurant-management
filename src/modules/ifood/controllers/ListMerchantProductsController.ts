@@ -10,7 +10,7 @@ class ListMerchantProductsController{
   
       const listMerchantProductsService = new ListMerchantProductsService();
   
-      const result = await listMerchantProductsService.execute(merchantId, authToken, page, limit);
+      const result = await listMerchantProductsService.execute({merchantId, authToken, page, limit});
   
       return response.json(result);
     }
